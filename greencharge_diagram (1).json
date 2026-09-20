@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Equipe GreenCharge",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_solar",
+      "top": -110,
+      "left": 230,
+      "attrs": { "color": "green", "label": "SOLAR" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_solar",
+      "top": -85,
+      "left": 225,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_misto",
+      "top": -40,
+      "left": 230,
+      "attrs": { "color": "yellow", "label": "MISTO" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_misto",
+      "top": -15,
+      "left": 225,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_rede",
+      "top": 30,
+      "left": 230,
+      "attrs": { "color": "red", "label": "REDE" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_rede",
+      "top": 55,
+      "left": 225,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp32:D25", "led_solar:A", "green", [ "h0" ] ],
+    [ "led_solar:C", "r_solar:1", "black", [ "v0" ] ],
+    [ "r_solar:2", "esp32:GND.1", "black", [ "v0" ] ],
+
+    [ "esp32:D26", "led_misto:A", "yellow", [ "h0" ] ],
+    [ "led_misto:C", "r_misto:1", "black", [ "v0" ] ],
+    [ "r_misto:2", "esp32:GND.2", "black", [ "v0" ] ],
+
+    [ "esp32:D27", "led_rede:A", "red", [ "h0" ] ],
+    [ "led_rede:C", "r_rede:1", "black", [ "v0" ] ],
+    [ "r_rede:2", "esp32:GND.3", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
