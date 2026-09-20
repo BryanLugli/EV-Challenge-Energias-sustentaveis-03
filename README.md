@@ -37,15 +37,4 @@ completa com a rede só no que faltar. A ideia é que esse protótipo não é um
 ele é o próximo passo natural do diagrama de arquitetura que já tínhamos: o bloco "Controlador
 OCPP/EVSE" que pega a decisão do motor Python e faz alguma coisa de verdade com ela.
 
-## Vídeo (até 5 min)
 
-Vale mostrar:
-1. A simulação rodando no Wokwi, passando pelos 6 cenários com os LEDs mudando.
-2. Uma explicação rápida de como a geração solar e os carros conectados chegam até a decisão.
-3. Como isso se conecta com o motor de decisão em Python da Sprint 2.
-4. Os dados: CO₂ evitado, economia, aproveitamento solar.
-
-## Lembrete de entrega
-
-A entrega final é só o `.txt`: nome, RM de cada integrante, link do vídeo no YouTube (não
-listado) e link do repositório GitHub.
