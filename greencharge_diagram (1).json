@@ -1,3 +1,4 @@
+
 {
   "version": 1,
   "author": "Equipe GreenCharge",
@@ -54,6 +55,9 @@
     }
   ],
   "connections": [
+    [ "esp32:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX0", "$serialMonitor:TX", "", [] ],
+
     [ "esp32:D25", "led_solar:A", "green", [ "h0" ] ],
     [ "led_solar:C", "r_solar:1", "black", [ "v0" ] ],
     [ "r_solar:2", "esp32:GND.1", "black", [ "v0" ] ],
